@@ -1,0 +1,32 @@
+<div>
+  <h4>Empleados Registrados</h4>
+  <table border>
+    <thead>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Opciones</th>
+    </thead>
+    <tfoot>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Opciones</th>
+    </tfoot>
+    <tbody>
+      <tr *ngFor="let empleado of empleados; let i = index" >
+        <td>{{i+1}}</td>
+        <td>{{empleado.nombre}}</td>
+        <td>{{empleado.email}}</td>
+        <td>
+          <button
+          (click)="deleteEmpleado(empleado.id!)"
+          >Eliminar</button>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+
+</div>

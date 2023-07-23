@@ -1,0 +1,20 @@
+<div>
+  <form (ngSubmit)="addEmpleado()" >
+    <input
+    type="text" name="nombre"
+    [(ngModel)]="empleado.nombre"
+    name="nombre"
+    id="nombre"
+    placeholder="Juan cho">
+    <input
+    type="email" name="email"
+    [(ngModel)]="empleado.email"
+    name="email"
+    id="email"
+    placeholder="juancho@gmail.com">
+    <button >Registrar Empleado</button>
+    <h5 *ngIf="errorForm" style="color: red;" ><strong>Error en el formulario</strong></h5>
+  </form>
+
+  <pre>{{empleado | json}}</pre>
+</div>
